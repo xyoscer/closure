@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+function counter() {
+    var n =0;
+    return {
+        count:function() {alert(n); n++; },
+        reset:function() {n=0;}
+        };
+        }
+    var c = counter(), d = counter();
+    c.count()                           //0
+    d.count()                           //0
+    c.reset()                          
+    c.count()                           //0
+    d.count()                           //1
+    </script>
